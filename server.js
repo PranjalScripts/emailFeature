@@ -13,6 +13,10 @@ app.use(cors());
 app.use(express.json());
 //routes
 app.use("/api/v1/portfolio", require("./routes/portfolioRoute"));
+app.get("/", (req, res) => {
+  res.send("<h1>This is Portfolio Backend</h1>");
+});
+
 
 //port
 const PORT = process.env.PORT || 8080;
